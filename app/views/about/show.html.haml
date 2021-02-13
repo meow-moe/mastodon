@@ -65,8 +65,9 @@
 
             = account_link_to @instance_presenter.contact_account
 
-          .hero-widget__footer__column
-            %h4= t 'about.server_stats'
+          - if Setting.activity_api_enabled
+            .hero-widget__footer__column
+              %h4= t 'about.server_stats'
 
             .hero-widget__counters__wrapper
               .hero-widget__counter
